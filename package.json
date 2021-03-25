@@ -39,6 +39,7 @@
     "lint-staged": "^9.5.0",
     "node-sass": "^4.12.0",
     "postcss": "^7.0.35",
+    "pre-commit": "^1.2.2",
     "prettier": "^2.2.1",
     "sass-loader": "^8.0.2",
     "tailwindcss": "npm:@tailwindcss/postcss7-compat@^2.0.4",
@@ -46,13 +47,22 @@
     "vue-jest": "^5.0.0-0",
     "vue-loader": "^16.1.2"
   },
+  "pre-commit": [
+    "test:unit"
+  ],
   "gitHooks": {
-    "pre-commit": "lint-staged"
+    "pre-commit": [
+      "lint-staged",
+      "unit-test"
+    ]
   },
   "lint-staged": {
     "*.{js,jsx,vue}": [
       "vue-cli-service lint",
       "git add"
     ]
-  }
+  },
+  "unit-test": [
+    "vue-cli-service test:unit"
+  ]
 }
