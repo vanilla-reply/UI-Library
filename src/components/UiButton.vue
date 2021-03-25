@@ -20,8 +20,7 @@
 <script>
 /**
  * Buttonelement: `a-button`
- * Use `variant` for styles, add an `icon`.
- * Add `to` for a `nuxt-link`, add `href` for a link, use none of them for a button. Button can emit a value with `@click`.
+ * Add `to` for a `router-link`, add `href` for a link, use none of them for a button. Button can also emit a value with `@click`.
  */
 
 export default {
@@ -29,7 +28,7 @@ export default {
   props: {
     variant: {
       type: [String, Boolean],
-      default: false,
+      default: "primary",
     },
     disabled: {
       type: Boolean,
@@ -53,14 +52,6 @@ export default {
     },
     title: {
       type: [String, Boolean],
-      default: false,
-    },
-    fontSize: {
-      type: String,
-      default: "",
-    },
-    fontInherit: {
-      type: Boolean,
       default: false,
     },
   },
@@ -124,7 +115,8 @@ export default {
 
 <style lang="scss" scoped>
 .btn {
-  @apply relative bg-red-500 text-link-500 text-black py-2 px-8;
+  @apply relative text-white py-2 px-8;
+  border-radius: 5px;
 
   &.fullwidth {
     @apply px-0;
@@ -148,7 +140,7 @@ export default {
 }
 
 .btn--secondary {
-  @apply bg-green-500;
+  @apply bg-secondary-500;
 }
 
 // sizes
@@ -158,5 +150,6 @@ export default {
 
 .btn[disabled] {
   @apply cursor-not-allowed;
+  @apply bg-inactive-200;
 }
 </style>

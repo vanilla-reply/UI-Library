@@ -13,11 +13,26 @@ const Template = (args) => ({
     return { args };
   },
   // And then the `args` are bound to your component with `v-bind="args"`
-  template: '<ui-button v-bind="args">lol rofls</ui-button>',
+  template: '<ui-button v-bind="args">Button Text</ui-button>',
 });
 
-export const Button = Template.bind({});
-Button.args = {
-  primary: true,
-  label: "Button",
+export const Primary = Template.bind({});
+Primary.args = {
+  variant: "primary",
+};
+
+export const Secondary = Template.bind({});
+Secondary.args = {
+  variant: "secondary",
+};
+
+export const Small = Template.bind({});
+Small.args = {
+  variant: "primary",
+  size: "sm",
+};
+
+export const Disabled = Template.bind({});
+Disabled.args = {
+  disabled: true,
 };
