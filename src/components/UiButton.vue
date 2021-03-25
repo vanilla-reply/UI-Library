@@ -1,5 +1,7 @@
 <template>
-  <button class="border p-4">{{ label }}</button>
+  <button class="p-4 text-pink-500 border bg-primary bg-primary-500">
+    {{ label }}
+  </button>
 </template>
 
 <script>

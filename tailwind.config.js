@@ -1,4 +1,6 @@
 const defaultTheme = require("tailwindcss/defaultTheme");
+const { colors } = require("tailwindcss/defaultTheme");
+
 module.exports = {
   future: {
     // removeDeprecatedGapUtilities: true,
@@ -10,6 +12,14 @@ module.exports = {
     fontFamily: {
       sans: ["Inter", ...defaultTheme.fontFamily.sans],
     },
+    extend: {
+      color: {
+        primary: colors.blue,
+        secondary: colors.green,
+        success: colors.green,
+        danger: colors.red,
+        link: colors.yellow,
+      },
+    },
   },
-  plugins: [],
 };
