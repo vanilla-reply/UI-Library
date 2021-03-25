@@ -13,7 +13,7 @@ module.exports = {
       sans: ["Inter", ...defaultTheme.fontFamily.sans],
     },
     extend: {
-      color: {
+      colors: {
         primary: colors.blue,
         secondary: colors.green,
         success: colors.green,
