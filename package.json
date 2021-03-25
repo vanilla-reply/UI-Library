@@ -36,7 +36,6 @@
     "eslint": "^6.7.2",
     "eslint-plugin-prettier": "^3.3.1",
     "eslint-plugin-vue": "^7.0.0",
-    "lint-staged": "^9.5.0",
     "node-sass": "^4.12.0",
     "postcss": "^7.0.35",
     "pre-commit": "^1.2.2",
@@ -48,21 +47,7 @@
     "vue-loader": "^16.1.2"
   },
   "pre-commit": [
+    "lint",
     "test:unit"
-  ],
-  "gitHooks": {
-    "pre-commit": [
-      "lint-staged",
-      "unit-test"
-    ]
-  },
-  "lint-staged": {
-    "*.{js,jsx,vue}": [
-      "vue-cli-service lint",
-      "git add"
-    ]
-  },
-  "unit-test": [
-    "vue-cli-service test:unit"
   ]
 }
