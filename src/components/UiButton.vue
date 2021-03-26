@@ -150,6 +150,6 @@ export default {
 
 .btn[disabled] {
   @apply cursor-not-allowed;
-  @apply bg-inactive-200;
+  @apply bg-gray-500;
 }
 </style>
