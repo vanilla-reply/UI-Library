@@ -1,32 +1,32 @@
 import UiNavbar from "./UiNavbar.vue";
+import UiBrand from "./UiBrand.vue";
 
 export default {
   title: "Core/Navbar",
   component: UiNavbar,
 };
 
-const Template = (args) => ({
-  // Components used in your story `template` are defined in the `components` object
-  components: { UiNavbar },
-  // The story's `args` need to be mapped into the template through the `setup()` method
+export const Template = (args) => ({
+  components: { UiNavbar, UiBrand },
   setup() {
     return { args };
   },
-  // And then the `args` are bound to your component with `v-bind="args"`
-  template: `
-    <ui-navbar v-bind="args">Logo</ui-navbar>
-  `,
+  template: `<ui-navbar v-bind="args">
+    <ui-brand :tag="h2" name="Demo"/>
+  </ui-navbar>`,
 });
 
-export const Primary = Template.bind({});
-Primary.args = {
-  fullscreen: false,
-  noSpacing: false,
+export const Secondary = Template.bind({});
+Secondary.args = {
+  variant: "secondary",
 };
 
-export const Secondary = Template.bind({});
-Primary.args = {
-  variant: "secondary",
-  fullscreen: false,
-  noSpacing: false,
+export const MediumSize = Template.bind({});
+MediumSize.args = {
+  size: "md",
+};
+
+export const LargeSize = Template.bind({});
+LargeSize.args = {
+  size: "lg",
 };
