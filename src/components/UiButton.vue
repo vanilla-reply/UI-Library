@@ -2,7 +2,6 @@
   <component
     :is="buttonType"
     class="block btn md:w-auto md:inline-block"
-    :to="to"
     :class="{
       [buttonClass]: buttonClass,
       [buttonSize]: buttonSize,
@@ -11,7 +10,7 @@
     }"
     :title="title"
     v-bind="buttonProps"
-    @click="callback($event)"
+    @click.stop="callback($event)"
   >
     <slot />
   </component>
@@ -54,6 +53,11 @@ export default {
       type: [String, Boolean],
       default: false,
     },
+  },
+  data() {
+    return {
+      isDisabled: false,
+    };
   },
   computed: {
     buttonProps() {
@@ -107,7 +111,15 @@ export default {
        * @event click
        * @type {Event}
        */
-      this.$emit("click", evt);
+
+      // @Note the delay is neccessary to avoid a doubleclick
+      if (this.isDisabled) return;
+      this.isDisabled = true;
+
+      setTimeout(() => {
+        this.isDisabled = false;
+        this.$emit("click", evt);
+      }, 500);
     },
   },
 };
