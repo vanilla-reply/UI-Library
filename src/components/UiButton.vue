@@ -125,43 +125,43 @@ export default {
 };
 </script>
 
-<style lang="scss" scoped>
-.btn {
-  @apply relative text-white py-2 px-8;
-  border-radius: 5px;
+<!-- <style lang="scss" scoped> -->
+<!-- .btn { -->
+<!--   @apply relative text-white py-2 px-8; -->
+<!--   border-radius: 5px; -->
 
-  &.fullwidth {
-    @apply px-0;
-  }
+<!--   &.fullwidth { -->
+<!--     @apply px-0; -->
+<!--   } -->
 
-  svg {
-    @apply inline-block mr-0;
-    vertical-align: baseline;
-  }
+<!--   svg { -->
+<!--     @apply inline-block mr-0; -->
+<!--     vertical-align: baseline; -->
+<!--   } -->
 
-  + .btn {
-    @media screen and (min-width: 768px) {
-      @apply ml-2;
-    }
-  }
-}
+<!--   + .btn { -->
+<!--     @media screen and (min-width: 768px) { -->
+<!--       @apply ml-2; -->
+<!--     } -->
+<!--   } -->
+<!-- } -->
 
-// variants
-.btn--primary {
-  @apply bg-primary-500;
-}
+<!-- // variants -->
+<!-- .btn--primary { -->
+<!--   @apply bg-primary-500; -->
+<!-- } -->
 
-.btn--secondary {
-  @apply bg-secondary-500;
-}
+<!-- .btn--secondary { -->
+<!--   @apply bg-secondary-500; -->
+<!-- } -->
 
-// sizes
-.btn--sm {
-  @apply py-1 px-2;
-}
+<!-- // sizes -->
+<!-- .btn--sm { -->
+<!--   @apply py-1 px-2; -->
+<!-- } -->
 
-.btn[disabled] {
-  @apply cursor-not-allowed;
-  @apply bg-gray-500;
-}
-</style>
+<!-- .btn[disabled] { -->
+<!--   @apply cursor-not-allowed; -->
+<!--   @apply bg-gray-500; -->
+<!-- } -->
+<!-- </style> -->

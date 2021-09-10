@@ -34,38 +34,38 @@ export default {
 };
 </script>
 
-<style lang="scss" scoped>
-.ui-navbar {
-  @apply relative;
+<!-- <style lang="scss" scoped> -->
+<!-- .ui-navbar { -->
+<!--   @apply relative; -->
 
-  &--primary {
-    @apply bg-primary-500;
-    color: white;
-  }
+<!--   &--primary { -->
+<!--     @apply bg-primary-500; -->
+<!--     color: white; -->
+<!--   } -->
 
-  &--secondary {
-    @apply bg-secondary-500;
-    color: white;
-  }
+<!--   &--secondary { -->
+<!--     @apply bg-secondary-500; -->
+<!--     color: white; -->
+<!--   } -->
 
-  &--sm {
-    @apply px-2 py-2;
-  }
+<!--   &--sm { -->
+<!--     @apply px-2 py-2; -->
+<!--   } -->
 
-  &--md {
-    @apply px-2 py-4;
-  }
+<!--   &--md { -->
+<!--     @apply px-2 py-4; -->
+<!--   } -->
 
-  &--lg {
-    @apply px-2 py-8;
-  }
+<!--   &--lg { -->
+<!--     @apply px-2 py-8; -->
+<!--   } -->
 
-  &--xl {
-    @apply px-2 py-8;
-  }
+<!--   &--xl { -->
+<!--     @apply px-2 py-8; -->
+<!--   } -->
 
-  &--xxl {
-    @apply px-4 py-8;
-  }
-}
-</style>
+<!--   &--xxl { -->
+<!--     @apply px-4 py-8; -->
+<!--   } -->
+<!-- } -->
+<!-- </style> -->
