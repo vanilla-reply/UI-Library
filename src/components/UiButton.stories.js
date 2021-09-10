@@ -1,4 +1,6 @@
-import UiButton from "./UiButton.vue";
+// import UiButton from "./UiButton.vue";
+import { UiButton } from '../../dist/my-lib.es.js'
+
 
 export default {
   title: "Core/Button",

@@ -1,7 +1,8 @@
 <template>
   <component
     :is="buttonType"
-    class="block btn md:w-auto md:inline-block"
+    class222="block btn md:w-auto md:inline-block"
+    class="deine-mutter ui-button"
     :class="{
       [buttonClass]: buttonClass,
       [buttonSize]: buttonSize,
@@ -124,6 +125,18 @@ export default {
   },
 };
 </script>
+
+<style scoped>
+.ui-button {
+  position: relative;
+}
+.deine-mutter {
+  position: absolute;
+  width: 300rem;
+  font-weight: bold
+}
+
+</style>
 
 <!-- <style lang="scss" scoped> -->
 <!-- .btn { -->
