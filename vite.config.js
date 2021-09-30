@@ -15,13 +15,23 @@ export default defineConfig({
       // make sure to externalize deps that shouldn't be bundled
       // into your library
       external: ['vue'],
-      output: {
-        // Provide global variables to use in the UMD build
-        // for externalized deps
+      output: [{
+        format: "esm",
+        sourcemap: true,
+        esModule: true,
+        exports: "named",
         globals: {
-          vue: 'Vue'
+          vue: "Vue"
         }
-      }
+      }, {
+        format: "umd",
+        inlineDynamicImports: true,
+        interop: "esModule",
+        exports: "named",
+        globals: {
+          vue: "Vue"
+        }
+      }],
     }
   }
 })

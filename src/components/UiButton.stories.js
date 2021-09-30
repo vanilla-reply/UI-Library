@@ -1,9 +1,11 @@
 // import UiButton from "./UiButton.vue";
-import { UiButton } from '../../dist/my-lib.es.js'
+import { UiButton } from '../../dist/my-lib.esm.js'
+// import UiButton from '../../dist/UiButton.js'
+// import UiButton from './UiButton.vue'
 
 
 export default {
-  title: "Core/Button",
+  title: "Core/UiButton",
   component: UiButton,
 };
 
