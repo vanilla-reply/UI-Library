@@ -2,7 +2,7 @@
   <component
     :is="buttonType"
     class222="block btn md:w-auto md:inline-block"
-    class="deine-mutter ui-button"
+    class="deine-mutter btn"
     :class="{
       [buttonClass]: buttonClass,
       [buttonSize]: buttonSize,
@@ -14,6 +14,7 @@
     @click.stop="callback($event)"
   >
     <slot />
+    <span>Mutti</span>
   </component>
 </template>
 
@@ -126,55 +127,32 @@ export default {
 };
 </script>
 
-<style scoped>
-.ui-button {
-  position: relative;
+<style lang="pcss" scoped>
+.btn {
+  @apply relative text-white py-2 px-8;
+  @apply bg-gray-500 rounded-full;
+
+  &.fullwidth {
+    @apply px-0;
+  }
+
+  svg {
+    @apply inline-block mr-0;
+    vertical-align: baseline;
+  }
+
+  + .btn {
+    @media screen and (min-width: 768px) {
+      @apply ml-2;
+    }
+  }
 }
-.deine-mutter {
-  position: absolute;
-  width: 300rem;
-  font-weight: bold
+.btn--sm {
+  @apply py-1 px-2;
 }
 
+.btn[disabled] {
+  @apply cursor-not-allowed;
+  @apply bg-gray-500;
+}
 </style>
-
-<!-- <style lang="scss" scoped> -->
-<!-- .btn { -->
-<!--   @apply relative text-white py-2 px-8; -->
-<!--   border-radius: 5px; -->
-
-<!--   &.fullwidth { -->
-<!--     @apply px-0; -->
-<!--   } -->
-
-<!--   svg { -->
-<!--     @apply inline-block mr-0; -->
-<!--     vertical-align: baseline; -->
-<!--   } -->
-
-<!--   + .btn { -->
-<!--     @media screen and (min-width: 768px) { -->
-<!--       @apply ml-2; -->
-<!--     } -->
-<!--   } -->
-<!-- } -->
-
-<!-- // variants -->
-<!-- .btn--primary { -->
-<!--   @apply bg-primary-500; -->
-<!-- } -->
-
-<!-- .btn--secondary { -->
-<!--   @apply bg-secondary-500; -->
-<!-- } -->
-
-<!-- // sizes -->
-<!-- .btn--sm { -->
-<!--   @apply py-1 px-2; -->
-<!-- } -->
-
-<!-- .btn[disabled] { -->
-<!--   @apply cursor-not-allowed; -->
-<!--   @apply bg-gray-500; -->
-<!-- } -->
-<!-- </style> -->

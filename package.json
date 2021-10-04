@@ -9,6 +9,7 @@
     "build-storybook": "build-storybook"
   },
   "dependencies": {
+    "postcss-import": "^14.0.2",
     "vue": "^3.2.6"
   },
   "devDependencies": {
