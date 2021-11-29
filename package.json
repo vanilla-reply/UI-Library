@@ -1,6 +1,6 @@
 {
-  "name": "ui-library",
-  "version": "0.0.0",
+  "name": "ptt-ui-library",
+  "version": "0.0.1",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
@@ -12,18 +12,19 @@
     "postcss-import": "^14.0.2",
     "vue": "^3.2.6"
   },
+  "files": ["dist", "src"],
   "devDependencies": {
     "@babel/core": "^7.15.5",
-    "@storybook/addon-actions": "^6.4.0-alpha.34",
-    "@storybook/addon-essentials": "^6.4.0-alpha.34",
-    "@storybook/addon-links": "^6.4.0-alpha.34",
-    "@storybook/vue3": "^6.4.0-alpha.34",
+    "@storybook/addon-actions": "^6.4.0",
+    "@storybook/addon-essentials": "^6.4.0",
+    "@storybook/addon-links": "^6.4.0",
+    "@storybook/vue3": "^6.4.0",
     "@vitejs/plugin-vue": "^1.6.1",
     "@vue/compiler-sfc": "^3.2.6",
     "autoprefixer": "^10.3.4",
     "babel-loader": "^8.2.2",
     "postcss": "^8.3.6",
-    "storybook-builder-vite": "^0.0.12",
+    "storybook-builder-vite": "^0.1.10",
     "tailwindcss": "^2.2.15",
     "vite": "^2.5.4",
     "vue-loader": "^16.5.0"
