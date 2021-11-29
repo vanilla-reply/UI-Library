@@ -1,6 +1,6 @@
 {
   "name": "ptt-ui-library",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
@@ -8,6 +8,7 @@
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook"
   },
+  "main": "./dist/ptt-ui-lib.esm.js",
   "dependencies": {
     "postcss-import": "^14.0.2",
     "vue": "^3.2.6"

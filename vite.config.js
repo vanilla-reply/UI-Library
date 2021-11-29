@@ -8,8 +8,8 @@ export default defineConfig({
   build: {
     lib: {
       entry: path.resolve(__dirname, 'src/main.js'),
-      name: 'MyLib',
-      fileName: (format) => `my-lib.${format}.js`
+      name: 'PttUiLib',
+      fileName: (format) => `ptt-ui-lib.${format}.js`
     },
     rollupOptions: {
       // make sure to externalize deps that shouldn't be bundled
