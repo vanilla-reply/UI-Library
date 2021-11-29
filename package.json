@@ -1,6 +1,6 @@
 {
-  "name": "@portaltech/ptt-ui-library",
-  "version": "0.0.3",
+  "name": "@portaltech-reply/ptt-ui-library",
+  "version": "0.0.4",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
@@ -8,7 +8,14 @@
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook"
   },
-  "main": "./dist/ptt-ui-lib.esm.js",
+  "main": "./dist/ptt-ui-library.umd.js",
+  "module": "./dist/ptt-ui-library.es.js",
+  "exports": {
+    ".": {
+      "import": "./dist/ptt-ui-library.es.js",
+      "require": "./dist/ptt-ui-library.umd.js"
+    }
+  },
   "dependencies": {
     "postcss-import": "^14.0.2",
     "vue": "^3.2.6"
