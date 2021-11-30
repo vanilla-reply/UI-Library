@@ -1,8 +1,7 @@
 <template>
   <component
     :is="buttonType"
-    class222="block btn md:w-auto md:inline-block"
-    class="deine-mutter btn"
+    class="btn"
     :class="{
       [buttonClass]: buttonClass,
       [buttonSize]: buttonSize,
@@ -14,7 +13,6 @@
     @click.stop="callback($event)"
   >
     <slot />
-    <span>Mutti</span>
   </component>
 </template>
 
@@ -52,6 +50,10 @@ export default {
       default: "button",
     },
     title: {
+      type: [String, Boolean],
+      default: false,
+    },
+    fullWidth: {
       type: [String, Boolean],
       default: false,
     },
@@ -94,7 +96,7 @@ export default {
       }
     },
     buttonFontSize() {
-      switch (this.fontSize) {
+      switch (this.size) {
         case "sm":
           return "text-copy-small";
         case "md":
@@ -129,8 +131,9 @@ export default {
 
 <style lang="pcss" scoped>
 .btn {
-  @apply relative text-white py-2 px-8;
-  @apply bg-gray-500 rounded-full;
+  @apply block md:w-auto md:inline-block;
+  @apply relative text-black py-2 px-8;
+  @apply bg-gray-300 rounded border-0;
 
   &.fullwidth {
     @apply px-0;
