@@ -1,7 +1,7 @@
 import UiContainer from "./UiContainer.vue";
 
 export default {
-  title: "Core/Container",
+  title: "Component/Container",
   component: UiContainer,
 };
 
@@ -21,8 +21,20 @@ const Template = (args) => ({
   `,
 });
 
-export const Container = Template.bind({});
-Container.args = {
+export const Default = Template.bind({});
+Default.args = {
   fullscreen: false,
   noSpacing: false,
+};
+
+export const Full = Template.bind({});
+Full.args = {
+  fullscreen: true,
+  noSpacing: false,
+};
+
+export const Compact = Template.bind({});
+Compact.args = {
+  fullscreen: false,
+  noSpacing: true,
 };

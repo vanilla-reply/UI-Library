@@ -1,7 +1,7 @@
 <template>
   <div
-    :class="{ 'max-w-7xl': !fullscreen, 'mt-8 mb-16': !noSpacing }"
-    class="mx-auto"
+    class="ui-container"
+    :class="{ 'ui-container--full': fullscreen, 'ui-container--compact': noSpacing }"
   >
     <slot />
   </div>
@@ -26,4 +26,17 @@ export default {
 };
 </script>
 
-<style lang="scss" scoped></style>
+<style lang="pcss">
+.ui-container {
+  @apply mx-auto;
+  @apply max-w-7xl;
+  @apply mt-8 mb-16;
+
+  &--full {
+    @apply max-w-full;
+  }
+  &--compact {
+    @apply mt-0 mb-0;
+  }
+}
+</style>
