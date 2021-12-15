@@ -5,6 +5,10 @@
 </template>
 
 <script>
+/**
+ * This should feature an image or logo
+ * Prio: Low
+ */
 export default {
   name: "UiBrand",
   props: {
@@ -19,3 +23,5 @@ export default {
   },
 };
 </script>
+
+<style lang="pcss"></style>

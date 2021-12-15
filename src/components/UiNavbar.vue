@@ -11,6 +11,10 @@
 </template>
 
 <script>
+/**
+ * Navbars als almost all the time custom implementations, so there is no generic approach
+ * Prio: Low
+ */
 export default {
   name: "UiNavbar",
   props: {
