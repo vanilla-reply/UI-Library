@@ -34,7 +34,7 @@
     "postcss": "^8.3.6",
     "storybook-builder-vite": "^0.1.10",
     "tailwindcss": "^2.2.15",
-    "vite": "^2.5.4",
+    "vite": "^2.9.13",
     "vue-loader": "^16.5.0"
   }
 }
